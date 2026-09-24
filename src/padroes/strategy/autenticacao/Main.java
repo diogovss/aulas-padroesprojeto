@@ -13,5 +13,11 @@ public class Main {
         // Biometria
         sistema.setMecanismo(new AutenticacaoBiometria());
         sistema.realizarLogin("usuario_mobile", "hash_biometrico");
+
+        System.out.println("---");
+
+        // Token
+        sistema.setMecanismo(new AutenticacaoToken());
+        sistema.realizarLogin("usuario_api", "1111-2222");
     }
 }
